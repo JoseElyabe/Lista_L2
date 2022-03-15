@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int divisao(int, int);
+float divisao(int, int);
 
 
 int main () {
@@ -15,25 +15,36 @@ int main () {
 	
 	divisao(a, b);
 
-	printf("%d",divisao(a,b));
+	printf("%g",divisao(a,b));
 	return 0;
 }
 
 
-int divisao (int a, int b) {
+float divisao (int a, int b) {
 	
 	if (a % b == 0) {
 		    
 	return 0;
 	
-	} else {
-		
-		while (a % b != 0) {
-			
-			b++ ;
-		
-		return b;	
-		}
-	}
+	} else if  (a % b != 0 & a < b){
+	do {
+				
+	b = --b;
+	 
+	return b;
 	
-}
+	}while (a % b != 0);
+	
+} else {
+	
+	do {
+		
+	b = ++b;
+					
+return b;
+			
+} while (a % b != 0 );
+
+	}
+		
+}	
